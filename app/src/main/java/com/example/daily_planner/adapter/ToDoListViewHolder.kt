@@ -22,7 +22,6 @@ class ToDoListViewHolder(
         if (listItem.isCompleted()){
             binding.texto.paintFlags = Paint.STRIKE_THRU_TEXT_FLAG
         }
-
         binding.botonCompletar.setImageResource(listItem.imageResource())
         binding.botonCompletar.setColorFilter(listItem.imageColor(context))
 

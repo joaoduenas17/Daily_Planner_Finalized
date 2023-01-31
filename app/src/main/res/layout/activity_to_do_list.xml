@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#234060"
+    android:background="@drawable/fondo2_edited"
     tools:context=".PageDoList">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -12,15 +12,15 @@
         android:layout_width="58dp"
         android:layout_height="56dp"
         android:clickable="true"
-        app:backgroundTint="@color/white"
+        app:backgroundTint="#234060"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.90"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.92"
-        app:maxImageSize="@android:dimen/app_icon_size"
-        app:srcCompat="@drawable/ic_add" />
+        app:maxImageSize="30dp"
+        app:srcCompat="@drawable/add_icon" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_do_list"

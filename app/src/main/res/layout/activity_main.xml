@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#234060"
+    android:background="@drawable/fondo1_edited"
     tools:context=".MainActivity">
 
     <TextView
@@ -29,6 +29,7 @@
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/created_text"
         app:layout_constraintVertical_bias="0.4" />
@@ -46,18 +47,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/created_text" />
 
-    <TextView
+    <View
         android:id="@+id/daily_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/cavilant"
-        android:text="Daily Planner"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
         app:layout_constraintBottom_toTopOf="@+id/created_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.8" />
+        app:layout_constraintVertical_bias="0.95" />
 
     <ImageView
         android:id="@+id/imagen_logo"
@@ -68,6 +66,6 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@drawable/logo_final" />
+        tools:srcCompat="@drawable/logo_fondo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

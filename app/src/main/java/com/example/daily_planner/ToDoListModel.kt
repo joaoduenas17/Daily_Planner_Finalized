@@ -34,8 +34,7 @@ class ToDoListModel: ViewModel() {
     fun setCompleted(newList: ToDoList) {
         val list = listItem.value
         val item = list!!.find { it.id == newList.id }!!
-        if (item.completedDate == null)
-            item.completedDate = LocalDate.now()
+        item.check = true
         listItem.postValue(list)
     }
 

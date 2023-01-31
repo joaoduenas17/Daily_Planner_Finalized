@@ -12,11 +12,11 @@ import java.util.UUID
 data class ToDoList(
     var texto:String,
     var desc:String,
-    var completedDate: LocalDate?,
+    var check: Boolean,
     var id: UUID = UUID.randomUUID()
 )
 {
-    fun isCompleted()= completedDate!=null
+    fun isCompleted()= check!=false
     fun imageResource(): Int= if (isCompleted())R.drawable.check_imagen else R.drawable.uncheck_imagen
     fun imageColor(context: Context): Int= if (isCompleted()) blue(context) else black(context)
     private fun blue(context: Context)= ContextCompat.getColor(context,

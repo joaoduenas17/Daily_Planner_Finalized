@@ -24,6 +24,7 @@ class NewFragmentSheet(var listItem: ToDoList?) : BottomSheetDialogFragment() {
 
         if (listItem != null){
             binding.titulo.text = "Editar Tarea"
+            binding.botonGuardar.text = "Actualizar"
             val editable = Editable.Factory.getInstance()
             binding.txtTexto.text = editable.newEditable(listItem!!.texto)
             binding.desc.text = editable.newEditable(listItem!!.desc)
@@ -34,7 +35,7 @@ class NewFragmentSheet(var listItem: ToDoList?) : BottomSheetDialogFragment() {
 
         toDoListModel = ViewModelProvider(activity).get(ToDoListModel::class.java)
         binding.botonGuardar.setOnClickListener{
-            saveAction()
+            uptdateList()
         }
     }
 
@@ -43,12 +44,12 @@ class NewFragmentSheet(var listItem: ToDoList?) : BottomSheetDialogFragment() {
         return binding.root
     }
 
-    private fun saveAction() {
+    private fun uptdateList() {
         val texto = binding.txtTexto.text.toString()
         val desc = binding.desc.text.toString()
         if (listItem == null)
         {
-            val newTask = ToDoList(texto,desc,null)
+            val newTask = ToDoList(texto,desc,false)
 
             toDoListModel.addListItem(newTask)
         }
